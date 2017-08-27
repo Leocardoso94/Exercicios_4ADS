@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Program
 {
@@ -9,7 +10,9 @@ public class Program
         //exercicio2();
         //exercicio3();
         //exercicio4(10);
-        exercicio8(3);
+        //exercicio8(3);
+        //exercicio9(5);
+        exercicio10();
     }
 
     public static void exercicio1()
@@ -100,6 +103,52 @@ public class Program
             {
                 Console.WriteLine(ar[j]);
             }
+        }
+    }
+    public static void exercicio9(int numDeAlunos)
+    {
+        Dictionary<String, double> notaPorAluno = new Dictionary<String, double>();
+        while (notaPorAluno.Count < numDeAlunos)
+        {
+            Console.WriteLine("Informe o nome do aluno: ");
+            String nome = Console.ReadLine();
+            Console.WriteLine("Informe a nota do aluno: " + nome);
+            string nota = Console.ReadLine();
+            double notaConvertida = Convert.ToDouble(nota);
+            notaPorAluno.Add(nome, notaConvertida);
+        }
+        double soma = 0;
+        foreach (KeyValuePair<String, double> par in notaPorAluno)
+        {
+            soma += par.Value;
+        }
+        double media = soma / notaPorAluno.Count;
+        foreach (KeyValuePair<String, double> par in notaPorAluno)
+        {
+            if (par.Value > media)
+            {
+                Console.WriteLine("Aluno: " + par.Key + ", nota: " + par.Value);
+            }
+        }
+        Console.WriteLine("Media das notas: " + media);
+    }
+    public static void exercicio10()
+    {
+        ArrayList salarios = new ArrayList();
+        double salario = 0;
+        while (salario != -1)
+        {
+            Console.WriteLine("Informe um salário: ");
+            string salarioStr = Console.ReadLine();
+            salario = Convert.ToDouble(salarioStr);
+            salarios.Add(salario);
+        }
+        Console.WriteLine("Informe o valor de reajuste: ");
+        string reajusteStr = Console.ReadLine();
+        double reajuste = Convert.ToDouble(reajusteStr);
+        for (int i = 0; i <= salarios.Count && Convert.ToDouble(salarios[i]) != -1; i++)
+        {
+            Console.WriteLine("Salário reajustado: " + (Convert.ToDouble(salarios[i]) + reajuste));
         }
 
     }

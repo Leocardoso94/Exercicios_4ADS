@@ -88,7 +88,7 @@ public class Program
             soma += Convert.ToInt32(ar[j]);
         }
         media = soma / ar.Count;
-        Console.WriteLine("notas maiores que a média: " + media);
+        Console.WriteLine("notas maiores que a mÃ©dia: " + media);
         for (int j = 0; j < ar.Count; j++)
         {
             if (Convert.ToInt32(ar[j]) > media)
@@ -96,7 +96,7 @@ public class Program
                 Console.WriteLine(ar[j]);
             }
         }
-        Console.WriteLine("notas menores que a média: " + media);
+        Console.WriteLine("notas menores que a mÃ©dia: " + media);
         for (int j = 0; j < ar.Count; j++)
         {
             if (Convert.ToInt32(ar[j]) < media)
@@ -138,7 +138,7 @@ public class Program
         double salario = 0;
         while (salario != -1)
         {
-            Console.WriteLine("Informe um salário: ");
+            Console.WriteLine("Informe um salÃ¡rio: ");
             string salarioStr = Console.ReadLine();
             salario = Convert.ToDouble(salarioStr);
             salarios.Add(salario);
@@ -148,7 +148,7 @@ public class Program
         double reajuste = Convert.ToDouble(reajusteStr);
         for (int i = 0; i <= salarios.Count && Convert.ToDouble(salarios[i]) != -1; i++)
         {
-            Console.WriteLine("Salário reajustado: " + (Convert.ToDouble(salarios[i]) + reajuste));
+            Console.WriteLine("SalÃ¡rio reajustado: " + (Convert.ToDouble(salarios[i]) + reajuste));
         }
 
     }

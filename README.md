@@ -46,13 +46,11 @@ Para finalizar utilize o número –1. (Utilize os 2 tipos de repetição: While
 dia: 'v' - para compras à vista 'p' - para compras a prazo É dada uma
 lista de transações contendo o valor de cada compra e o respectivo
 código da transação. Faça um Programa que calcule e imprima:
-```
-```
+
 valor total das compras à vista;
 valor total das compras a prazo;
 valor total das compras efetuadas;
-```
-```
+
 O valor a receber pelas compras a prazo, isto é, primeira parcela,
 sabendo que estas serão pagas em três vezes. Sabe-se que são
 efetuadas 25 transações por dia.
